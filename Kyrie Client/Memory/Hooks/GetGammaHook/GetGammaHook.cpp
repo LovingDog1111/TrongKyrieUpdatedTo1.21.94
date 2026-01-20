@@ -1,0 +1,17 @@
+#include "GetGammaHook.h"
+#include "../../Memory.h"
+#include "../../../Client/Client.h"
+
+typedef float(__fastcall* getGamma)(uintptr_t*);
+getGamma _getGamma;
+
+float GetGammaHook::getGamma(uintptr_t* a1) {
+    static FullBright* fullBrightMod = client->moduleMgr->getModule<FullBright>();
+    if (fullBrightMod->isEnabled()) return 12.f;
+    return _getGamma(a1);
+}
+
+void GetGammaHook::init(uintptr_t** VTable) {
+    uintptr_t address = reinterpret_cast<uintptr_t>(VTable[146]);
+    Memory::CreateHook("GetGammaHook", address, &GetGammaHook::getGamma, &_getGamma);
+}

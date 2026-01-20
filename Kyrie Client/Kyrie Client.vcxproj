@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{0ec27d1d-2028-470e-98b7-0bfceed4ef4e}</ProjectGuid>
+    <RootNamespace>KyrieClient</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;KYRIECLIENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;KYRIECLIENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;KYRIECLIENT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDLL;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>C:\Users\xuntf\OneDrive\Desktop\Kyrie-Client-master\Kyrie-Client-master\Kyrie Client\Libs\libhat;C:\Users\xuntf\OneDrive\Desktop\Kyrie-Client-master\Kyrie-Client-master\Kyrie Client\Libs\entt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>dwrite.lib;dxgi.lib;d2d1.lib;d3d11.lib;d3d12.lib;dxguid.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Client\Client.cpp" />
+    <ClCompile Include="Client\Globals.cpp" />
+    <ClCompile Include="Client\ModuleManager\ModuleManager.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Client\Arraylist\Arraylist.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Client\ClickGUI\ClickGui.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Client\Colors\Colors.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Client\CustomFont\CustomFont.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Client\HUD\HUD.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Client\Notifications\Notifications.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Client\Unject\Unject.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Module.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Player\BlockReach\BlockReach.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Render\FullBright\FullBright.cpp" />
+    <ClCompile Include="Client\ModuleManager\Modules\Render\Swing\Swing.cpp" />
+    <ClCompile Include="Client\NotificationManager\NotificationManager.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="ImFX\imfx.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp" />
+    <ClCompile Include="ImGui\imgui_demo.cpp" />
+    <ClCompile Include="ImGui\imgui_draw.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_dx12.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="ImGui\imgui_tables.cpp" />
+    <ClCompile Include="ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Kiero\Kiero.cpp" />
+    <ClCompile Include="Memory\GameData\GameData.cpp" />
+    <ClCompile Include="Memory\Hooks\GameModeGetPickRangeHook\GameModeGetPickRangeHook.cpp" />
+    <ClCompile Include="Memory\Hooks\GetGammaHook\GetGammaHook.cpp" />
+    <ClCompile Include="Memory\Hooks\HookManager.cpp" />
+    <ClCompile Include="Memory\Hooks\KeyMapHook\KeyMapHook.cpp" />
+    <ClCompile Include="Memory\Hooks\KeyMouseHook\KeyMouseHook.cpp" />
+    <ClCompile Include="Memory\Hooks\MobGetCurrentSwingDurationHook\MobGetCurrentSwingDurationHook.cpp" />
+    <ClCompile Include="Memory\Hooks\ClientInstanceUpdateHook\ClientInstanceUpdate.cpp" />
+    <ClCompile Include="Memory\Hooks\SwapChainHook\SwapChainHook.cpp" />
+    <ClCompile Include="Memory\Memory.cpp" />
+    <ClCompile Include="Utils\ColorUtils.cpp" />
+    <ClCompile Include="Utils\RenderUtils.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Client\Client.h" />
+    <ClInclude Include="Client\Globals.h" />
+    <ClInclude Include="Client\ModuleManager\ModuleManager.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Client\Arraylist\Arraylist.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Client\ClickGUI\ClickGui.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Client\Colors\Colors.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Client\CustomFont\CustomFont.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Client\HUD\HUD.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Client\Notifications\Notifications.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Client\Unject\Unject.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Module.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Player\BlockReach\BlockReach.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Render\FullBright\FullBright.h" />
+    <ClInclude Include="Client\ModuleManager\Modules\Render\Swing\Swing.h" />
+    <ClInclude Include="Client\NotificationManager\NotificationManager.h" />
+    <ClInclude Include="Fonts\Arial.h" />
+    <ClInclude Include="Fonts\Mojangles.h" />
+    <ClInclude Include="ImFX\imfx.h" />
+    <ClInclude Include="ImGui\imconfig.h" />
+    <ClInclude Include="ImGui\imgui.h" />
+    <ClInclude Include="ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="ImGui\imgui_impl_dx12.h" />
+    <ClInclude Include="ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="ImGui\imgui_internal.h" />
+    <ClInclude Include="ImGui\imstb_rectpack.h" />
+    <ClInclude Include="ImGui\imstb_textedit.h" />
+    <ClInclude Include="ImGui\imstb_truetype.h" />
+    <ClInclude Include="Kiero\Kiero.h" />
+    <ClInclude Include="Libs\entt\config\config.h" />
+    <ClInclude Include="Libs\entt\config\macro.h" />
+    <ClInclude Include="Libs\entt\config\version.h" />
+    <ClInclude Include="Libs\entt\container\dense_map.hpp" />
+    <ClInclude Include="Libs\entt\container\dense_set.hpp" />
+    <ClInclude Include="Libs\entt\container\fwd.hpp" />
+    <ClInclude Include="Libs\entt\container\table.hpp" />
+    <ClInclude Include="Libs\entt\core\algorithm.hpp" />
+    <ClInclude Include="Libs\entt\core\any.hpp" />
+    <ClInclude Include="Libs\entt\core\attribute.h" />
+    <ClInclude Include="Libs\entt\core\bit.hpp" />
+    <ClInclude Include="Libs\entt\core\compressed_pair.hpp" />
+    <ClInclude Include="Libs\entt\core\enum.hpp" />
+    <ClInclude Include="Libs\entt\core\family.hpp" />
+    <ClInclude Include="Libs\entt\core\fwd.hpp" />
+    <ClInclude Include="Libs\entt\core\hashed_string.hpp" />
+    <ClInclude Include="Libs\entt\core\ident.hpp" />
+    <ClInclude Include="Libs\entt\core\iterator.hpp" />
+    <ClInclude Include="Libs\entt\core\memory.hpp" />
+    <ClInclude Include="Libs\entt\core\monostate.hpp" />
+    <ClInclude Include="Libs\entt\core\ranges.hpp" />
+    <ClInclude Include="Libs\entt\core\tuple.hpp" />
+    <ClInclude Include="Libs\entt\core\type_info.hpp" />
+    <ClInclude Include="Libs\entt\core\type_traits.hpp" />
+    <ClInclude Include="Libs\entt\core\utility.hpp" />
+    <ClInclude Include="Libs\entt\entity\component.hpp" />
+    <ClInclude Include="Libs\entt\entity\entity.hpp" />
+    <ClInclude Include="Libs\entt\entity\fwd.hpp" />
+    <ClInclude Include="Libs\entt\entity\group.hpp" />
+    <ClInclude Include="Libs\entt\entity\handle.hpp" />
+    <ClInclude Include="Libs\entt\entity\helper.hpp" />
+    <ClInclude Include="Libs\entt\entity\mixin.hpp" />
+    <ClInclude Include="Libs\entt\entity\observer.hpp" />
+    <ClInclude Include="Libs\entt\entity\organizer.hpp" />
+    <ClInclude Include="Libs\entt\entity\ranges.hpp" />
+    <ClInclude Include="Libs\entt\entity\registry.hpp" />
+    <ClInclude Include="Libs\entt\entity\runtime_view.hpp" />
+    <ClInclude Include="Libs\entt\entity\snapshot.hpp" />
+    <ClInclude Include="Libs\entt\entity\sparse_set.hpp" />
+    <ClInclude Include="Libs\entt\entity\storage.hpp" />
+    <ClInclude Include="Libs\entt\entity\view.hpp" />
+    <ClInclude Include="Libs\entt\entt.hpp" />
+    <ClInclude Include="Libs\entt\fwd.hpp" />
+    <ClInclude Include="Libs\entt\graph\adjacency_matrix.hpp" />
+    <ClInclude Include="Libs\entt\graph\dot.hpp" />
+    <ClInclude Include="Libs\entt\graph\flow.hpp" />
+    <ClInclude Include="Libs\entt\graph\fwd.hpp" />
+    <ClInclude Include="Libs\entt\locator\locator.hpp" />
+    <ClInclude Include="Libs\entt\meta\adl_pointer.hpp" />
+    <ClInclude Include="Libs\entt\meta\container.hpp" />
+    <ClInclude Include="Libs\entt\meta\context.hpp" />
+    <ClInclude Include="Libs\entt\meta\factory.hpp" />
+    <ClInclude Include="Libs\entt\meta\fwd.hpp" />
+    <ClInclude Include="Libs\entt\meta\meta.hpp" />
+    <ClInclude Include="Libs\entt\meta\node.hpp" />
+    <ClInclude Include="Libs\entt\meta\pointer.hpp" />
+    <ClInclude Include="Libs\entt\meta\policy.hpp" />
+    <ClInclude Include="Libs\entt\meta\range.hpp" />
+    <ClInclude Include="Libs\entt\meta\resolve.hpp" />
+    <ClInclude Include="Libs\entt\meta\template.hpp" />
+    <ClInclude Include="Libs\entt\meta\type_traits.hpp" />
+    <ClInclude Include="Libs\entt\meta\utility.hpp" />
+    <ClInclude Include="Libs\entt\poly\fwd.hpp" />
+    <ClInclude Include="Libs\entt\poly\poly.hpp" />
+    <ClInclude Include="Libs\entt\process\fwd.hpp" />
+    <ClInclude Include="Libs\entt\process\process.hpp" />
+    <ClInclude Include="Libs\entt\process\scheduler.hpp" />
+    <ClInclude Include="Libs\entt\resource\cache.hpp" />
+    <ClInclude Include="Libs\entt\resource\fwd.hpp" />
+    <ClInclude Include="Libs\entt\resource\loader.hpp" />
+    <ClInclude Include="Libs\entt\resource\resource.hpp" />
+    <ClInclude Include="Libs\entt\signal\delegate.hpp" />
+    <ClInclude Include="Libs\entt\signal\dispatcher.hpp" />
+    <ClInclude Include="Libs\entt\signal\emitter.hpp" />
+    <ClInclude Include="Libs\entt\signal\fwd.hpp" />
+    <ClInclude Include="Libs\entt\signal\sigh.hpp" />
+    <ClInclude Include="Libs\libhat\libhat.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\Access.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\Callable.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\CompileTime.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\Concepts.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\c\libhat.h" />
+    <ClInclude Include="Libs\libhat\libhat\Defines.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\FixedString.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\MemoryProtector.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\Process.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\Result.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\Scanner.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\Signature.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\StringLiteral.hpp" />
+    <ClInclude Include="Libs\libhat\libhat\Traits.hpp" />
+    <ClInclude Include="Memory\GameData\GameData.h" />
+    <ClInclude Include="Memory\Hooks\GameModeGetPickRangeHook\GameModeGetPickRangeHook.h" />
+    <ClInclude Include="Memory\Hooks\GetGammaHook\GetGammaHook.h" />
+    <ClInclude Include="Memory\Hooks\HookManager.h" />
+    <ClInclude Include="Memory\Hooks\KeyMapHook\KeyMapHook.h" />
+    <ClInclude Include="Memory\Hooks\KeyMouseHook\KeyMouseHook.h" />
+    <ClInclude Include="Memory\Hooks\MobGetCurrentSwingDurationHook\MobGetCurrentSwingDurationHook.h" />
+    <ClInclude Include="Memory\Hooks\ClientInstanceUpdateHook\ClientInstanceUpdate.h" />
+    <ClInclude Include="Memory\Hooks\SwapChainHook\SwapChainHook.h" />
+    <ClInclude Include="Memory\Memory.h" />
+    <ClInclude Include="SDK\Actor.h" />
+    <ClInclude Include="SDK\ClientInstance.h" />
+    <ClInclude Include="SDK\Components\RenderPositionComponent.h" />
+    <ClInclude Include="SDK\Components\StateVectorComponent.h" />
+    <ClInclude Include="SDK\EntityContext\EntityContext.h" />
+    <ClInclude Include="SDK\EntityContext\EntityID.h" />
+    <ClInclude Include="SDK\EntityContext\EntityIdTraits.h" />
+    <ClInclude Include="SDK\FilePath.h" />
+    <ClInclude Include="SDK\GameMode.h" />
+    <ClInclude Include="SDK\GuiData.h" />
+    <ClInclude Include="SDK\Level.h" />
+    <ClInclude Include="SDK\LevelRenderer.h" />
+    <ClInclude Include="SDK\LevelRendererPlayer.h" />
+    <ClInclude Include="SDK\MinecraftUIRenderContext.h" />
+    <ClInclude Include="SDK\Mob.h" />
+    <ClInclude Include="SDK\Player.h" />
+    <ClInclude Include="SDK\TexturePtr.h" />
+    <ClInclude Include="Utils\ColorUtils.h" />
+    <ClInclude Include="Utils\Math.h" />
+    <ClInclude Include="Utils\RenderUtils.h" />
+    <ClInclude Include="Utils\Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Libs\libhat\libhat\Scanner.inl" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Libs\libhat\libhat.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\minhook.1.3.3\build\native\minhook.targets" Condition="Exists('..\packages\minhook.1.3.3\build\native\minhook.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\minhook.1.3.3\build\native\minhook.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\minhook.1.3.3\build\native\minhook.targets'))" />
+  </Target>
+</Project>
